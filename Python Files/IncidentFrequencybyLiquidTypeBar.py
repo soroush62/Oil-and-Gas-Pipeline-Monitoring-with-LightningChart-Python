@@ -20,7 +20,7 @@ categories = ['Pipeline Type', 'Liquid Type']
 # Initialize the chart
 chart = lc.BarChart(
     vertical=True,
-    theme=lc.Themes.Dark,
+    theme=lc.Themes.Light,
     title='Incident Frequency by Category Over the Years (Stacked Bar Chart)'
 )
 chart.set_sorting('alphabetical') 

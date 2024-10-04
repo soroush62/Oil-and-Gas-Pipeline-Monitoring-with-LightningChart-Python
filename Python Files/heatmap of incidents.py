@@ -83,7 +83,7 @@ heatmap.set_step(x=(lon_edges.max() - lon_edges.min()) / incident_density.shape[
 
 # Set the density values directly to the heatmap
 heatmap.invalidate_intensity_values(incident_density.tolist())
-heatmap.hide_wireframe()
+# heatmap.hide_wireframe()
 
 # Set the X and Y axes labels
 chart.get_default_x_axis().set_title('Longitude')
@@ -92,11 +92,11 @@ chart.get_default_y_axis().set_title('Latitude')
 # Define a custom color palette for the heatmap
 custom_palette = [
     {"value": np.min(incident_density), "color": lc.Color(204, 229, 255)},
-    {"value": np.percentile(incident_density, 99), "color": lc.Color(0, 0, 255)},    # Blue for low density
-    {"value": np.percentile(incident_density, 99.25), "color": lc.Color(0, 255, 255)}, # Cyan for 25th percentile
-    {"value": np.percentile(incident_density, 99.5), "color": lc.Color(0, 255, 0)}, # Green for median density
-    {"value": np.percentile(incident_density, 99.75), "color": lc.Color(255, 255, 204)}, # Yellow for 75th percentile
-    {"value": np.max(incident_density), "color": lc.Color(255, 0, 0)}     # Red for high density
+    {"value": np.percentile(incident_density, 99), "color": lc.Color(0, 0, 255)},   
+    {"value": np.percentile(incident_density, 99.25), "color": lc.Color(0, 255, 255)},
+    {"value": np.percentile(incident_density, 99.5), "color": lc.Color(0, 255, 0)}, 
+    {"value": np.percentile(incident_density, 99.75), "color": lc.Color(255, 255, 204)},
+    {"value": np.max(incident_density), "color": lc.Color(255, 0, 0)}    
 ]
 # print(np.max(incident_density))
 # print(np.percentile(incident_density, 99.5))
