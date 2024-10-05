@@ -1,0 +1,62 @@
+import numpy as np
+import pandas as pd
+import lightningchart as lc
+
+# Load your license key
+with open('D:/Computer Aplication/WorkPlacement/Projects/shared_variable.txt', 'r') as f:
+    mylicensekey = f.read().strip()
+lc.set_license(mylicensekey)
+
+# Load and preprocess your dataset
+file_path = 'Dataset/database.csv'
+data = pd.read_csv(file_path)
+data['Year'] = pd.to_datetime(data['Accident Date/Time']).dt.year
+
+# Aggregate data
+aggregated_data = data.groupby('Year').agg({
+    'Accident Year': 'count',
+    'Liquid Recovery (Barrels)': 'mean',
+    'Net Loss (Barrels)': 'mean',
+    'All Costs': 'mean'
+}).reset_index()
+aggregated_data.columns = ['Year', 'Incidents', 'Average Liquid Recovery', 'Average Net Loss', 'All Costs']
+
+# Scaling features for spider chart
+scaled_data = aggregated_data.copy()
+for column in ['Incidents', 'Average Liquid Recovery', 'Average Net Loss', 'All Costs']:
+    min_val = scaled_data[column].min()
+    max_val = scaled_data[column].max()
+    scaled_data[column] = (scaled_data[column] - min_val) / (max_val - min_val) * 10  # scale to a 10-point scale
+
+# Create Spider Chart
+chart = lc.SpiderChart(
+    theme=lc.Themes.White,
+    title='Pipeline Incident Impact Metrics Over Time'
+)
+chart.set_axis_label_font(weight='bold', size=15)
+chart.set_nib_style(thickness=5, color=lc.Color(0, 0, 0))
+
+# Add each metric as an axis
+metrics = ['Incidents', 'Average Liquid Recovery', 'Average Net Loss', 'All Costs']
+for metric in metrics:
+    chart.add_axis(metric)
+
+# Track series in a list for easy access
+series_list = []
+
+# Add series for each year
+for _, row in scaled_data.iterrows():
+    series = chart.add_series()
+    series.set_name(f"Year {int(row['Year'])}")
+    series.add_points([
+        {'axis': metric, 'value': row[metric]} for metric in metrics
+    ])
+    series_list.append(series)  # Add series to the list
+
+# Add legend to distinguish between years
+legend = chart.add_legend()
+for series in series_list:
+    legend.add(data=series)
+
+# Open the chart
+chart.open()
