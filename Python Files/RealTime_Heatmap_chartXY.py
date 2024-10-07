@@ -397,7 +397,7 @@ def update_dashboard():
         heatmap.invalidate_intensity_values(incident_density.tolist())
         heatmap_chart.set_title(f'Geospatial Analysis of All Costs Over Time in year {year}')
         
-        time.sleep(4)  # Simulate real-time data update delay
+        time.sleep(5)  # Simulate real-time data update delay
 
 # Open the dashboard and start updating
 dashboard.open(live=True)

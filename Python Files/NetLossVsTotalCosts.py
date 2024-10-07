@@ -67,6 +67,7 @@ legend = chart.add_legend()
 legend.set_margin(70)
 legend.add(series_loss)
 legend.add(series_costs)
+legend.set_margin(120)
 
 # Open the chart
 chart.open()

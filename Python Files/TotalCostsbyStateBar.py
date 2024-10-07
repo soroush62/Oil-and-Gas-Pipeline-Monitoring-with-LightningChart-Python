@@ -29,6 +29,6 @@ chart.set_sorting('descending')
 # Rotate labels for better readability and set data
 chart.set_label_rotation(90)
 chart.set_data(chart_data)
-
+chart.set_value_label_font_size(10)
 # Open the chart
 chart.open()

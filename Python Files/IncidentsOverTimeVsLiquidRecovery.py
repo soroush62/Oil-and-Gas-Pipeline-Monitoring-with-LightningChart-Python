@@ -57,6 +57,7 @@ incident_series.set_line_color(lc.Color(255, 255, 0))  # Yellow line for contras
 legend = chart.add_legend()
 legend.add(incident_series)
 legend.add(recovery_series)
+legend.set_margin(70)
 
 # Open the chart
 chart.open()

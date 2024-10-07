@@ -35,8 +35,6 @@ series = chart.add_point_series(
     rotations=True,
     lookup_values=True,
 )
-print(np.array(range(10,50)))
-# Set up values based on your dataset
 x_values = monthly_data['Date'].apply(lambda x: int(x.timestamp() * 1000)).tolist()  # X-axis as monthly date in milliseconds
 y_values = monthly_data['Net Loss (Barrels)'].tolist()  # Y-axis as Net Loss or other metric
 sizes = monthly_data['BubbleSize'].tolist()  # Bubble sizes based on Net Loss
