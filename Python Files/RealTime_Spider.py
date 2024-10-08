@@ -927,10 +927,14 @@ heatmap_chart = dashboard.ChartXY(row_index=1, column_index=0, column_span=3)
 heatmap = heatmap_chart.add_heatmap_grid_series(rows=100, columns=100)
 heatmap.set_palette_colors(
     steps=[
-        {'value': 0, 'color': lc.Color(0, 0, 255)},  # Blue
-        {'value': 50000, 'color': lc.Color(0, 255, 0)},  # Green
-        {'value': 100000, 'color': lc.Color(255, 255, 0)},  # Yellow
-        {'value': 500000, 'color': lc.Color(255, 0, 0)}  # Red
+        {'value': 0, 'color': lc.Color(0, 0, 255)},  
+        {'value': 50000, 'color': lc.Color(0, 255, 0)}, 
+        {'value': 500000, 'color': lc.Color(255, 255, 0)}, 
+        {'value': 1000000, 'color': lc.Color(255, 178, 102)},  
+        {'value': 5000000, 'color': lc.Color(204, 102, 0)}, 
+        {'value': 10000000, 'color': lc.Color(255, 102, 102)}, 
+        {'value': 25000000, 'color': lc.Color(255, 0, 0)},
+        {'value': 25000000, 'color': lc.Color(51, 0, 51)}
     ],
     look_up_property='value'
 )

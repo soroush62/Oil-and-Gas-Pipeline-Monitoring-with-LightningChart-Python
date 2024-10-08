@@ -5,7 +5,7 @@ with open('D:/Computer Aplication/WorkPlacement/Projects/shared_variable.txt', '
     mylicensekey = f.read().strip()
 lc.set_license(mylicensekey)
 
-file_path = 'Dataset/database.csv'  
+file_path = 'Dataset/database.csv' 
 data = pd.read_csv(file_path)
 
 cause_counts = data['Cause Subcategory'].value_counts()
@@ -23,5 +23,4 @@ chart.set_sorting('disabled')
 chart.set_label_rotation(90)
 chart.set_data(chart_data)
 
-# Open the chart
 chart.open()

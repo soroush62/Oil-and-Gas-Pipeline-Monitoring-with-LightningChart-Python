@@ -23,5 +23,4 @@ chart.set_sorting('descending')
 chart.set_label_rotation(90)
 chart.set_data(chart_data)
 chart.set_value_label_font_size(10)
-
 chart.open()

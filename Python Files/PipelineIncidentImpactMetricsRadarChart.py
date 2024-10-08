@@ -22,7 +22,7 @@ scaled_data = aggregated_data.copy()
 for column in ['Incidents', 'Average Liquid Recovery', 'Average Net Loss', 'All Costs']:
     min_val = scaled_data[column].min()
     max_val = scaled_data[column].max()
-    scaled_data[column] = (scaled_data[column] - min_val) / (max_val - min_val) * 10 
+    scaled_data[column] = (scaled_data[column] - min_val) / (max_val - min_val) * 10  
 
 chart = lc.SpiderChart(
     theme=lc.Themes.White,
@@ -36,13 +36,14 @@ for metric in metrics:
     chart.add_axis(metric)
 
 series_list = []
+
 for _, row in scaled_data.iterrows():
     series = chart.add_series()
     series.set_name(f"Year {int(row['Year'])}")
     series.add_points([
         {'axis': metric, 'value': row[metric]} for metric in metrics
     ])
-    series_list.append(series)
+    series_list.append(series) 
 
 legend = chart.add_legend()
 for series in series_list:
