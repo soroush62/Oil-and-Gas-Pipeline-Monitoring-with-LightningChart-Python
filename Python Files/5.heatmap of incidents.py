@@ -1,45 +1,8 @@
-# import pandas as pd
-# import matplotlib.pyplot as plt
-# import seaborn as sns
-
-# # Load the dataset
-# data = pd.read_csv('Dataset/database.csv')
-
-# # Extract latitude and longitude columns
-# latitude = data['Accident Latitude']
-# longitude = data['Accident Longitude']
-
-# # Create a figure for the heatmap
-# plt.figure(figsize=(10, 8))
-
-# # Plot a heatmap using seaborn's kdeplot for latitude and longitude
-# sns.kdeplot(
-#     x=longitude,
-#     y=latitude,
-#     cmap="YlOrRd",
-#     shade=True,
-#     shade_lowest=False,
-#     alpha=0.7,
-#     cbar=True
-# )
-
-# # Set plot title and labels
-# plt.title('Geospatial Heatmap of Oil Spills and Leaks')
-# plt.xlabel('Longitude')
-# plt.ylabel('Latitude')
-
-# # Display the plot
-# plt.show()
-
-
-
 import pandas as pd
 import numpy as np
 import lightningchart as lc
 
-with open('D:/Computer Aplication/WorkPlacement/Projects/shared_variable.txt', 'r') as f:
-    mylicensekey = f.read().strip()
-lc.set_license(mylicensekey)
+lc.set_license(open('../license-key').read())
 
 data = pd.read_csv('Dataset/database.csv')
 

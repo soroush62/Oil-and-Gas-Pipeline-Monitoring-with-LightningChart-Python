@@ -1,9 +1,7 @@
 import pandas as pd
 import lightningchart as lc
 
-with open('D:/Computer Aplication/WorkPlacement/Projects/shared_variable.txt', 'r') as f:
-    mylicensekey = f.read().strip()
-lc.set_license(mylicensekey)
+lc.set_license(open('../license-key').read())
 
 file_path = 'Dataset/database.csv' 
 data = pd.read_csv(file_path)

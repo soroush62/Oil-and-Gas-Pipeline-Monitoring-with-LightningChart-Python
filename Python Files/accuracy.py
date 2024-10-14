@@ -11,6 +11,9 @@ from sklearn.svm import SVR
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.neighbors import KNeighborsRegressor
 
+
+lc.set_license(open('../license-key').read())
+
 file_path = 'Dataset/database.csv'
 data = pd.read_csv(file_path)
 data['Accident Date/Time'] = pd.to_datetime(data['Accident Date/Time'])
@@ -65,11 +68,8 @@ for model_name, model in models.items():
 performance_df = pd.DataFrame(model_performance)
 print(performance_df)
 
-with open('D:/Computer Aplication/WorkPlacement/Projects/shared_variable.txt', 'r') as f:
-    mylicensekey = f.read().strip()
-lc.set_license(mylicensekey)
 
-dashboard = lc.Dashboard(theme=lc.Themes.Dark, rows=1, columns=3)
+dashboard = lc.Dashboard(theme=lc.Themes.Light, rows=1, columns=3)
 
 mae_chart = dashboard.ChartXY(row_index=0, column_index=0)
 mae_chart.set_title("Model Comparison - MAE")
