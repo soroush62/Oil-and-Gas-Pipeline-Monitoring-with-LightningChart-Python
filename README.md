@@ -19,8 +19,11 @@ LightningChart Python is a high-performance data visualization library, designed
 LightningChart Python provides a suite of powerful features that are particularly beneficial for visualizing oil and gas data. Some of the chart types used in our analysis include:
 
 - **Point Line Chart**
+A line chart with points marked on the line, ideal for tracking changes over time, such as monthly trends in pipeline incidents. It shows both the direction and magnitude of change clearly.
 - **Stacked Bar Chart**
+A bar chart where categories are stacked on top of each other, allowing for the comparison of parts to the whole. For example, it can show incidents by liquid type or pipeline type, helping to see category distributions within the total incidents.
 - **Horizontal Bar Chart**
+Similar to a bar chart but oriented horizontally, useful for comparing categories with longer labels or when the focus is on ranking items, such as causes of pipeline incidents. It helps highlight the top causes of incidents.
 - **Heatmap**
 - **Radar Chart**
 - **Dual Axis Chart**
