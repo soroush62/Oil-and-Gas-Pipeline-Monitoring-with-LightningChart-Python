@@ -18,7 +18,7 @@ LightningChart Python is a high-performance data visualization library, designed
 ### Features and Chart Types to be Used in the Project
 LightningChart Python provides a suite of powerful features that are particularly beneficial for visualizing oil and gas data. Some of the chart types used in our analysis include:
 
-*Point Line Chart*:
+**Point Line Chart**:
 
 A line chart with points marked on the line, ideal for tracking changes over time, such as monthly trends in pipeline incidents. It shows both the direction and magnitude of change clearly.
 
