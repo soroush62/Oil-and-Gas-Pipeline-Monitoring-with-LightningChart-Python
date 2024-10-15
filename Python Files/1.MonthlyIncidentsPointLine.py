@@ -1,7 +1,7 @@
 import pandas as pd
 import lightningchart as lc
 
-lc.set_license(open('../license-key').read())
+lc.set_license('my-license-key')
 
 import pandas as pd
 import lightningchart as lc

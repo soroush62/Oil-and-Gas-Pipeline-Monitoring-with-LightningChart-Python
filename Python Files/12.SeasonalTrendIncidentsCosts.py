@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import lightningchart as lc
 
-lc.set_license(open('../license-key').read())
+lc.set_license('my-license-key')
 
 file_path = 'Dataset/database.csv'
 data = pd.read_csv(file_path)
@@ -77,3 +77,6 @@ legend = chart.add_legend()
 legend.add(box_series).add(line_series)
 
 chart.open()
+
+
+

@@ -7,9 +7,7 @@ from sklearn.preprocessing import OneHotEncoder, MinMaxScaler
 import time
 from datetime import datetime
 
-with open('D:/Computer Aplication/WorkPlacement/Projects/shared_variable.txt', 'r') as f:
-    mylicensekey = f.read().strip()
-lc.set_license(mylicensekey)
+lc.set_license('my-license-key')
 
 file_path = 'Dataset/database.csv'
 data = pd.read_csv(file_path)
@@ -172,4 +170,5 @@ def update_dashboard():
 
 dashboard.open(live=True)
 update_dashboard()
+
 

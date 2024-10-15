@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import lightningchart as lc
 
-lc.set_license(open('../license-key').read())
+lc.set_license('my-license-key')
 
 data = pd.read_csv('Dataset/database.csv')
 
