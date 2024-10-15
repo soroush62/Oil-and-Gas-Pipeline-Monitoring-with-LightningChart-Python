@@ -18,7 +18,7 @@ LightningChart Python is a high-performance data visualization library, designed
 ### Features and Chart Types to be Used in the Project
 LightningChart Python provides a suite of powerful features that are particularly beneficial for visualizing oil and gas data. Some of the chart types used in our analysis include:
 
-*Point Line Chart*:
+**Point Line Chart**:
 
 A line chart with points marked on the line, ideal for tracking changes over time, such as monthly trends in pipeline incidents. It shows both the direction and magnitude of change clearly.
 
@@ -121,7 +121,9 @@ With LightningChart, visualizing oil and gas data becomes highly interactive and
 
 ### Creating the Charts
 
-1. **Monthly Incident Frequency Line Chart**: This line chart highlights the monthly trend of oil pipeline incidents from 2010 to 2017, showing fluctuations in incident frequency. Peaks and troughs in the chart suggest seasonality or operational changes impacting incidents.
+### **Monthly Incident Frequency Line Chart**: 
+
+This line chart highlights the monthly trend of oil pipeline incidents from around 2010 to 2017, showing fluctuations in incident frequency. Peaks and troughs in the line chart suggest possible seasonality or operational changes that impact incident rates. The noticeable spikes and declines across different periods allow companies to identify times of higher risk, possibly linked to external factors such as weather or specific operational phases. Understanding these patterns helps in preparing timely safety measures and planning maintenance activities more effectively.
 
 #### Script Summary:
 ```python
@@ -140,7 +142,9 @@ chart.open()
 ```
 ![](Images/Monthly_Incidents_of_Oil_Pipeline_Leaks_and_Spills.png)
 
-2. **Pipeline Incidents by Liquid Type (Stacked Bar Chart)**: This stacked bar chart categorizes pipeline incidents by liquid type (e.g., crude oil, refined products), showing that crude oil has the highest incident frequency, indicating a need for targeted safety efforts.
+### **Pipeline Incidents by Liquid Type (Stacked Bar Chart)**: 
+
+The stacked bar chart categorizes pipeline incidents by the type of liquid (e.g., crude oil, refined products, CO₂). It shows that incidents related to crude oil are most common. This distribution allows decision-makers to focus safety and maintenance efforts more on pipelines transporting crude oil, as they are more susceptible to incidents. By understanding the distribution of incidents across liquid types, companies can implement targeted safety protocols for high-risk materials, thereby reducing potential hazards.
 
 #### Script Summary:
 ```python
@@ -160,7 +164,9 @@ for category in categories:
 ```
 ![](Images/Incident_Frequency_by_Liquid_Type_Over_the_Years.png)
 
-3. **Pipeline Incidents by Pipeline Type (Stacked Bar Chart)**: This chart categorizes incidents by pipeline type (e.g., aboveground, underground) for each year, revealing higher incident rates in underground and aboveground pipelines, highlighting where more frequent monitoring is needed.
+### **Pipeline Incidents by Pipeline Type (Stacked Bar Chart)**: 
+
+In this stacked bar chart, incidents are categorized by pipeline type (e.g., aboveground, underground) for each year. The chart reveals that underground and aboveground pipelines have higher incident rates compared to others. This information can guide resource allocation for inspection and maintenance, as these pipeline types may need more frequent monitoring. By focusing on the most vulnerable pipeline types, companies can optimize resource usage and reduce the likelihood of leaks or breaks in the future.
 
 #### Script Summary:
 ```python
@@ -179,7 +185,9 @@ for category in categories:
 ```
 ![](Images/Incident_Frequency_by_Pipeline_Type_Over_the_Years.png)
 
-4. **Cause of Pipeline Incidents (Horizontal Bar Chart)**: This chart ranks incident causes, showing "Internal" as the top cause. Identifying primary causes allows companies to mitigate risks by improving internal processes.
+### **Cause of Pipeline Incidents (Horizontal Bar Chart)**: 
+
+This horizontal bar chart ranks the causes of pipeline incidents, with "Internal" causes being the most frequent. Knowing that internal factors are the primary cause of incidents allows companies to evaluate their internal processes, materials, and pipeline conditions to mitigate these risks. By addressing the most frequent causes, organizations can potentially lower incident rates, reduce costs associated with repairs, and improve pipeline longevity.
 
 #### Script Summary:
 ```python
@@ -193,7 +201,9 @@ chart.open()
 ```
 ![](Images/Cause_Subcategory_Counts.png)
 
-5. **Incident Costs by State (Bar Chart)**: Displays total costs of incidents by state, providing insights into high-cost areas that may require additional monitoring and resources.
+### **Incident Costs by State (Bar Chart)**: 
+
+This bar chart presents the total costs associated with pipeline incidents across different states. It provides insights into geographic areas where incidents lead to higher expenses, highlighting states that may require additional resources for monitoring or incident response. This analysis can inform budgeting decisions, ensuring that states with historically higher incident costs receive adequate attention to prevent similar occurrences in the future.
 
 #### Script Summary:
 ```python
@@ -207,7 +217,9 @@ chart.open()
 ```
 ![](Images/Total_Costs_by_State.png)
 
-6. **Pipeline Spills and Leaks by Location (Heatmap)**: Shows geographic distribution of spills, with red areas indicating high-risk zones. This helps prioritize locations for safety checks.
+### **Pipeline Spills and Leaks by Location (Heatmap)**: 
+
+The heatmap visualizes the geographic distribution of pipeline spills and leaks, with areas in red indicating high incident concentrations. This map allows companies to pinpoint high-risk locations and prioritize them for additional safety checks or reinforcements. Geographic patterns in incidents may be influenced by factors such as environmental conditions, population density, or regional operational practices, helping companies address issues unique to specific areas.
 
 #### Script Summary:
 ```python
@@ -238,7 +250,9 @@ chart.open()
 ```
 ![](Images/Geospatial_Analysis_of_Oil_Pipeline_Spills_and_Leaks.png)
 
-7. **Comparison of Key Metrics by Year (Radar Chart)**: Compares various metrics—incident counts, liquid recovery, net loss, and costs—across years, helping to identify yearly variations in key metrics.
+### **Comparison of Key Metrics by Year (Radar Chart)**: 
+
+This radar chart compares various metrics—incident counts, average liquid recovery, net loss, and total costs—across multiple years from 2010 to 2017. Higher values in the incident metric relative to costs suggest that incidents generally have a low per-incident cost, indicating possible success in containment efforts. However, consistent high incident counts could imply a need for better preventive measures. This comprehensive view helps prioritize metrics for improvement based on yearly variations.
 
 #### Script Summary:
 ```python
@@ -273,7 +287,9 @@ chart.open()
 ```
 ![](Images/Pipeline_Incident_Impact_Metrics_Over_Time.png)
 
-8. **Net Loss vs. Total Costs (Dual Axis Chart)**: Illustrates the relationship between net loss and costs, showing a trend alignment that helps in predicting cost implications.
+### **Net Loss vs. Total Costs (Dual Axis Chart)**: 
+
+The dual-axis chart shows the relationship between annual net loss in barrels and the associated costs. It reveals that as net loss increases or decreases, there is a corresponding trend in costs, reflecting a direct relationship between the volume of lost materials and financial impact. This insight allows companies to predict cost implications based on net loss values, aiding in budget planning and incident impact estimation.
 
 #### Script Summary:
 ```python
@@ -303,7 +319,9 @@ chart.open()
 ```
 ![](Images/Annual_Net_Loss_(Barrels)_vs_Total_Costs_(USD).png)
 
-9. **Severity of Incidents by Month (Bubble Chart)**: Shows monthly incident severity with bubble size indicating cost impact, highlighting periods of higher financial consequences.
+### **Severity of Incidents by Month (Bubble Chart)**: 
+
+The bubble chart illustrates the severity of incidents for each month, with bubble size corresponding to cost impact. Larger bubbles indicate incidents with higher financial consequences, identifying months where incidents are more costly. This visualization helps prioritize specific times of the year for heightened safety measures, allowing companies to allocate emergency resources efficiently during peak incident months.
 
 #### Script Summary:
 ```python
@@ -336,7 +354,9 @@ chart.open()
 ```
 ![](Images/Monthly_Incident_Impact_and_Severity.png)
 
-10. **Monthly Costs by Category (Line Chart)**: Tracks monthly costs in various categories, enabling budget adjustments based on cost trends.
+### **Monthly Costs by Category (Line Chart)**: 
+
+This line chart visualizes monthly costs categorized by emergency, environmental, and other categories. It helps companies monitor cost trends in each area, enabling data-driven adjustments to budgets and resources as costs fluctuate. Seasonal variations in different cost categories may indicate the need for targeted response measures for specific incident types during particular months.
 
 #### Script Summary:
 ```python
@@ -375,7 +395,9 @@ chart.open()
 ```
 ![](Images/Monthly_Sum_Costs_by_Category.png)
 
-11. **Incident Frequency vs. Liquid Recovery (Dual Axis Chart)**: Compares incident frequency and recovery rates, evaluating recovery efficiency and response strategies.
+### **Incident Frequency vs. Liquid Recovery (Dual Axis Chart)**: 
+
+The dual-axis chart compares incident frequency against the volume of liquid recovery over time. Ideally, liquid recovery efforts should increase alongside rising incidents, reflecting an effective response strategy. This visualization helps evaluate the efficiency of recovery programs, as well as identify areas for improvement if recovery rates do not align with incident trends.
 
 #### Script Summary:
 ```python
@@ -405,7 +427,9 @@ chart.open()
 ```
 ![](Images/Incidents_Over_Time_vs_Liquid_Recovery.png)
 
-12. **Incident Frequency, Recovery Rate, and Severity Levels (Multi-Dimensional Analysis)**: Shows frequency, recovery rate, and severity levels over time, illustrating improvements in safety measures.
+### **Incident Frequency, Recovery Rate, and Severity Levels (Multi-Dimensional Analysis)**: 
+
+This chart combines incident frequency, recovery rate, and severity levels over time. A declining trend in incident frequency coupled with an increasing recovery rate suggests that safety measures are improving. Meanwhile, the steady severity level indicates consistent control over incident impacts. This multi-dimensional analysis provides a holistic view of safety improvements and areas where incident management could still be enhanced.
 
 #### Script Summary:
 ```python
@@ -440,7 +464,9 @@ chart.open()
 ```
 ![](Images/Incident_Frequency_and_Average_Recovery_Rate_Over_Time.png)
 
-13. **Seasonal Trend Analysis of Log-Normalized Incident Costs (Box Plot with Trend Line)**: Displays monthly cost distributions with a trend line, showing seasonal patterns in costs. Log-normalization enables better visualization, particularly for months with high variations.
+### **Seasonal Trend Analysis of Log-Normalized Incident Costs (Box Plot with Trend Line)**: 
+
+This box plot chart displays log-normalized monthly cost distributions, with a red trend line showing the average monthly trend. It reveals that costs vary seasonally, with certain months exhibiting higher incident costs. This pattern can guide companies in pre-emptive budgeting for months with historically higher costs. Log-normalization enables better visualization of differences, especially for months with extremely high or low values.
 
 #### Script Summary:
 ```python
@@ -475,7 +501,9 @@ chart.open()
 ```
 ![](Images/Seasonal_Trend_Analysis_of_Log-Normalized_Incident_Costs.png)
 
-14. **Comprehensive Incident and Cost Analysis (Multi-Chart Dashboard)**: A dashboard combining a stacked area chart, radar chart, heatmap, and gauge chart, providing a holistic view of pipeline metrics, cost distributions, and recovery rates.
+### **Comprehensive Incident and Cost Analysis (Multi-Chart Dashboard)**: 
+
+The dashboard combines a stacked area chart, radar chart, heatmap, and gauge chart to offer a complete view of incident metrics. The stacked area chart provides a year-round perspective on key metrics; the radar chart shows inter-metric relationships; the heatmap highlights high-cost areas; and the gauge chart indicates liquid recovery percentages. Together, these charts give a detailed, multifaceted view of pipeline health and incident costs, helping decision-makers monitor, prioritize, and manage resources more effectively.
 
 #### Script Summary:
 ```python
