@@ -499,7 +499,7 @@ chart.get_default_y_axis().set_title("Log-Normalized Cost (0 to 1)")
 chart.add_legend().add(chart.get_series_by_name("Monthly Log-Normalized Cost Distribution")).add(line_series)
 chart.open() 
 ```
-![](Images/Seasonal_Trend_Analysis_of_Log-Normalized_Incident_Costs.png)
+![](Images/Seasonal_Trend_Analysis_of_Log-Normalized_Incident_Costs_BocPlot.png)
 
 ### **Comprehensive Incident and Cost Analysis (Multi-Chart Dashboard)**: 
 
