@@ -121,7 +121,9 @@ With LightningChart, visualizing oil and gas data becomes highly interactive and
 
 ### Creating the Charts
 
-1. **Monthly Incident Frequency Line Chart**: This line chart highlights the monthly trend of oil pipeline incidents from 2010 to 2017, showing fluctuations in incident frequency. Peaks and troughs in the chart suggest seasonality or operational changes impacting incidents.
+### **Monthly Incident Frequency Line Chart**: 
+
+This line chart highlights the monthly trend of oil pipeline incidents from 2010 to 2017, showing fluctuations in incident frequency. Peaks and troughs in the chart suggest seasonality or operational changes impacting incidents.
 
 #### Script Summary:
 ```python
@@ -140,7 +142,9 @@ chart.open()
 ```
 ![](Images/Monthly_Incidents_of_Oil_Pipeline_Leaks_and_Spills.png)
 
-2. **Pipeline Incidents by Liquid Type (Stacked Bar Chart)**: This stacked bar chart categorizes pipeline incidents by liquid type (e.g., crude oil, refined products), showing that crude oil has the highest incident frequency, indicating a need for targeted safety efforts.
+### **Pipeline Incidents by Liquid Type (Stacked Bar Chart)**: 
+
+This stacked bar chart categorizes pipeline incidents by liquid type (e.g., crude oil, refined products), showing that crude oil has the highest incident frequency, indicating a need for targeted safety efforts.
 
 #### Script Summary:
 ```python
@@ -160,7 +164,9 @@ for category in categories:
 ```
 ![](Images/Incident_Frequency_by_Liquid_Type_Over_the_Years.png)
 
-3. **Pipeline Incidents by Pipeline Type (Stacked Bar Chart)**: This chart categorizes incidents by pipeline type (e.g., aboveground, underground) for each year, revealing higher incident rates in underground and aboveground pipelines, highlighting where more frequent monitoring is needed.
+### **Pipeline Incidents by Pipeline Type (Stacked Bar Chart)**: 
+
+This chart categorizes incidents by pipeline type (e.g., aboveground, underground) for each year, revealing higher incident rates in underground and aboveground pipelines, highlighting where more frequent monitoring is needed.
 
 #### Script Summary:
 ```python
@@ -179,7 +185,9 @@ for category in categories:
 ```
 ![](Images/Incident_Frequency_by_Pipeline_Type_Over_the_Years.png)
 
-4. **Cause of Pipeline Incidents (Horizontal Bar Chart)**: This chart ranks incident causes, showing "Internal" as the top cause. Identifying primary causes allows companies to mitigate risks by improving internal processes.
+### **Cause of Pipeline Incidents (Horizontal Bar Chart)**: 
+
+This chart ranks incident causes, showing "Internal" as the top cause. Identifying primary causes allows companies to mitigate risks by improving internal processes.
 
 #### Script Summary:
 ```python
@@ -193,7 +201,9 @@ chart.open()
 ```
 ![](Images/Cause_Subcategory_Counts.png)
 
-5. **Incident Costs by State (Bar Chart)**: Displays total costs of incidents by state, providing insights into high-cost areas that may require additional monitoring and resources.
+### **Incident Costs by State (Bar Chart)**: 
+
+Displays total costs of incidents by state, providing insights into high-cost areas that may require additional monitoring and resources.
 
 #### Script Summary:
 ```python
@@ -207,7 +217,9 @@ chart.open()
 ```
 ![](Images/Total_Costs_by_State.png)
 
-6. **Pipeline Spills and Leaks by Location (Heatmap)**: Shows geographic distribution of spills, with red areas indicating high-risk zones. This helps prioritize locations for safety checks.
+### **Pipeline Spills and Leaks by Location (Heatmap)**: 
+
+Shows geographic distribution of spills, with red areas indicating high-risk zones. This helps prioritize locations for safety checks.
 
 #### Script Summary:
 ```python
@@ -238,7 +250,9 @@ chart.open()
 ```
 ![](Images/Geospatial_Analysis_of_Oil_Pipeline_Spills_and_Leaks.png)
 
-7. **Comparison of Key Metrics by Year (Radar Chart)**: Compares various metrics—incident counts, liquid recovery, net loss, and costs—across years, helping to identify yearly variations in key metrics.
+### **Comparison of Key Metrics by Year (Radar Chart)**: 
+
+Compares various metrics—incident counts, liquid recovery, net loss, and costs—across years, helping to identify yearly variations in key metrics.
 
 #### Script Summary:
 ```python
@@ -273,7 +287,9 @@ chart.open()
 ```
 ![](Images/Pipeline_Incident_Impact_Metrics_Over_Time.png)
 
-8. **Net Loss vs. Total Costs (Dual Axis Chart)**: Illustrates the relationship between net loss and costs, showing a trend alignment that helps in predicting cost implications.
+### **Net Loss vs. Total Costs (Dual Axis Chart)**: 
+
+Illustrates the relationship between net loss and costs, showing a trend alignment that helps in predicting cost implications.
 
 #### Script Summary:
 ```python
@@ -303,7 +319,9 @@ chart.open()
 ```
 ![](Images/Annual_Net_Loss_(Barrels)_vs_Total_Costs_(USD).png)
 
-9. **Severity of Incidents by Month (Bubble Chart)**: Shows monthly incident severity with bubble size indicating cost impact, highlighting periods of higher financial consequences.
+### **Severity of Incidents by Month (Bubble Chart)**: 
+
+Shows monthly incident severity with bubble size indicating cost impact, highlighting periods of higher financial consequences.
 
 #### Script Summary:
 ```python
@@ -336,7 +354,9 @@ chart.open()
 ```
 ![](Images/Monthly_Incident_Impact_and_Severity.png)
 
-10. **Monthly Costs by Category (Line Chart)**: Tracks monthly costs in various categories, enabling budget adjustments based on cost trends.
+### **Monthly Costs by Category (Line Chart)**: 
+
+Tracks monthly costs in various categories, enabling budget adjustments based on cost trends.
 
 #### Script Summary:
 ```python
@@ -375,7 +395,9 @@ chart.open()
 ```
 ![](Images/Monthly_Sum_Costs_by_Category.png)
 
-11. **Incident Frequency vs. Liquid Recovery (Dual Axis Chart)**: Compares incident frequency and recovery rates, evaluating recovery efficiency and response strategies.
+### **Incident Frequency vs. Liquid Recovery (Dual Axis Chart)**: 
+
+Compares incident frequency and recovery rates, evaluating recovery efficiency and response strategies.
 
 #### Script Summary:
 ```python
@@ -405,7 +427,9 @@ chart.open()
 ```
 ![](Images/Incidents_Over_Time_vs_Liquid_Recovery.png)
 
-12. **Incident Frequency, Recovery Rate, and Severity Levels (Multi-Dimensional Analysis)**: Shows frequency, recovery rate, and severity levels over time, illustrating improvements in safety measures.
+### **Incident Frequency, Recovery Rate, and Severity Levels (Multi-Dimensional Analysis)**: 
+
+Shows frequency, recovery rate, and severity levels over time, illustrating improvements in safety measures.
 
 #### Script Summary:
 ```python
@@ -440,7 +464,9 @@ chart.open()
 ```
 ![](Images/Incident_Frequency_and_Average_Recovery_Rate_Over_Time.png)
 
-13. **Seasonal Trend Analysis of Log-Normalized Incident Costs (Box Plot with Trend Line)**: Displays monthly cost distributions with a trend line, showing seasonal patterns in costs. Log-normalization enables better visualization, particularly for months with high variations.
+### **Seasonal Trend Analysis of Log-Normalized Incident Costs (Box Plot with Trend Line)**: 
+
+Displays monthly cost distributions with a trend line, showing seasonal patterns in costs. Log-normalization enables better visualization, particularly for months with high variations.
 
 #### Script Summary:
 ```python
@@ -475,7 +501,9 @@ chart.open()
 ```
 ![](Images/Seasonal_Trend_Analysis_of_Log-Normalized_Incident_Costs.png)
 
-14. **Comprehensive Incident and Cost Analysis (Multi-Chart Dashboard)**: A dashboard combining a stacked area chart, radar chart, heatmap, and gauge chart, providing a holistic view of pipeline metrics, cost distributions, and recovery rates.
+### **Comprehensive Incident and Cost Analysis (Multi-Chart Dashboard)**: 
+
+A dashboard combining a stacked area chart, radar chart, heatmap, and gauge chart, providing a holistic view of pipeline metrics, cost distributions, and recovery rates.
 
 #### Script Summary:
 ```python
