@@ -138,7 +138,7 @@ chart.add_point_line_series(data_pattern='ProgressiveX').set_point_size(8).set_p
 ('Triangle').set_point_color(lc.Color('orange')).add(x_values, y_values)
 chart.open()
 ```
-![](Images/Crude_Oil_Production_Over_Time.png)
+![](Images/Monthly_Incidents_of_Oil_Pipeline_Leaks_and_Spills.png)
 
 2. **Pipeline Incidents by Liquid Type (Stacked Bar Chart)**: This stacked bar chart categorizes pipeline incidents by liquid type (e.g., crude oil, refined products), showing that crude oil has the highest incident frequency, indicating a need for targeted safety efforts.
 
@@ -158,7 +158,7 @@ for category in categories:
     chart.open()
 
 ```
-![](Images/Crude_Oil_Production_Over_Time.png)
+![](Images/Incident_Frequency_by_Liquid_Type_Over_the_Years.png)
 
 3. **Pipeline Incidents by Pipeline Type (Stacked Bar Chart)**: This chart categorizes incidents by pipeline type (e.g., aboveground, underground) for each year, revealing higher incident rates in underground and aboveground pipelines, highlighting where more frequent monitoring is needed.
 
@@ -177,7 +177,7 @@ for category in categories:
     chart.set_data_stacked(x_values, stacked_data).set_title(f'Incident Frequency by {category} Over the Years')
     chart.open()
 ```
-![](Images/Crude_Oil_Production_Over_Time.png)
+![](Images/Incident_Frequency_by_Pipeline_Type_Over_the_Years.png)
 
 4. **Cause of Pipeline Incidents (Horizontal Bar Chart)**: This chart ranks incident causes, showing "Internal" as the top cause. Identifying primary causes allows companies to mitigate risks by improving internal processes.
 
@@ -191,7 +191,7 @@ chart = lc.BarChart(vertical=True, theme=lc.Themes.White, title='Cause Subcatego
 chart.set_sorting('disabled').set_label_rotation(90).set_data(chart_data)
 chart.open()
 ```
-![](Images/Crude_Oil_Production_Over_Time.png)
+![](Images/Cause_Subcategory_Counts.png)
 
 5. **Incident Costs by State (Bar Chart)**: Displays total costs of incidents by state, providing insights into high-cost areas that may require additional monitoring and resources.
 
@@ -205,7 +205,7 @@ chart = lc.BarChart(vertical=True, theme=lc.Themes.White, title='Total Costs by 
 chart.set_sorting('descending').set_label_rotation(90).set_data(chart_data).set_value_label_font_size(10)
 chart.open()
 ```
-![](Images/Crude_Oil_Production_Over_Time.png)
+![](Images/Total_Costs_by_State.png)
 
 6. **Pipeline Spills and Leaks by Location (Heatmap)**: Shows geographic distribution of spills, with red areas indicating high-risk zones. This helps prioritize locations for safety checks.
 
@@ -236,7 +236,7 @@ chart.get_default_y_axis().set_title('Latitude')
 chart.add_legend(data=heatmap, title="Incident Density")
 chart.open()
 ```
-![](Images/Crude_Oil_Production_Over_Time.png)
+![](Images/Geospatial_Analysis_of_Oil_Pipeline_Spills_and_Leaks.png)
 
 7. **Comparison of Key Metrics by Year (Radar Chart)**: Compares various metrics—incident counts, liquid recovery, net loss, and costs—across years, helping to identify yearly variations in key metrics.
 
@@ -271,7 +271,7 @@ for _, row in scaled_data.iterrows():
 chart.add_legend()
 chart.open()
 ```
-![](Images/Crude_Oil_Production_Over_Time.png)
+![](Images/Pipeline_Incident_Impact_Metrics_Over_Time.png)
 
 8. **Net Loss vs. Total Costs (Dual Axis Chart)**: Illustrates the relationship between net loss and costs, showing a trend alignment that helps in predicting cost implications.
 
@@ -301,7 +301,7 @@ y_axis_loss.add_constant_line().set_value(0).set_stroke(2, lc.Color(255, 0, 0))
 chart.add_legend().set_margin(120)
 chart.open()
 ```
-![](Images/Crude_Oil_Production_Over_Time.png)
+![](Images/Annual_Net_Loss_(Barrels)_vs_Total_Costs_(USD).png)
 
 9. **Severity of Incidents by Month (Bubble Chart)**: Shows monthly incident severity with bubble size indicating cost impact, highlighting periods of higher financial consequences.
 
@@ -334,7 +334,7 @@ chart.get_default_y_axis().set_title('Net Loss (Barrels)')
 chart.add_legend().add(series).set_title('Total Costs')
 chart.open()
 ```
-![](Images/Crude_Oil_Production_Over_Time.png)
+![](Images/Monthly_Incident_Impact_and_Severity.png)
 
 10. **Monthly Costs by Category (Line Chart)**: Tracks monthly costs in various categories, enabling budget adjustments based on cost trends.
 
@@ -373,7 +373,7 @@ chart.get_default_x_axis().set_title('Month (DateTime)').set_tick_strategy('Date
 chart.get_default_y_axis().set_title('Sum Cost ($Millions)')
 chart.open()
 ```
-![](Images/Crude_Oil_Production_Over_Time.png)
+![](Images/Monthly_Sum_Costs_by_Category.png)
 
 11. **Incident Frequency vs. Liquid Recovery (Dual Axis Chart)**: Compares incident frequency and recovery rates, evaluating recovery efficiency and response strategies.
 
@@ -403,7 +403,7 @@ recovery_series.set_fill_color(lc.Color(0, 128, 255, 128))
 legend = chart.add_legend().add(incident_series).add(recovery_series).set_margin(70)
 chart.open()
 ```
-![](Images/Crude_Oil_Production_Over_Time.png)
+![](Images/Incidents_Over_Time_vs_Liquid_Recovery.png)
 
 12. **Incident Frequency, Recovery Rate, and Severity Levels (Multi-Dimensional Analysis)**: Shows frequency, recovery rate, and severity levels over time, illustrating improvements in safety measures.
 
@@ -438,7 +438,7 @@ chart.get_default_x_axis().set_title("Year").set_tick_strategy("DateTime")
 chart.add_legend().add(incident_series).add(recovery_series).set_margin(140)
 chart.open()
 ```
-![](Images/Crude_Oil_Production_Over_Time.png)
+![](Images/Incident_Frequency_and_Average_Recovery_Rate_Over_Time.png)
 
 13. **Seasonal Trend Analysis of Log-Normalized Incident Costs (Box Plot with Trend Line)**: Displays monthly cost distributions with a trend line, showing seasonal patterns in costs. Log-normalization enables better visualization, particularly for months with high variations.
 
@@ -473,7 +473,7 @@ chart.get_default_y_axis().set_title("Log-Normalized Cost (0 to 1)")
 chart.add_legend().add(chart.get_series_by_name("Monthly Log-Normalized Cost Distribution")).add(line_series)
 chart.open()
 ```
-![](Images/Crude_Oil_Production_Over_Time.png)
+![](Images/Seasonal_Trend_Analysis_of_Log-Normalized_Incident_Costs.png)
 
 14. **Comprehensive Incident and Cost Analysis (Multi-Chart Dashboard)**: A dashboard combining a stacked area chart, radar chart, heatmap, and gauge chart, providing a holistic view of pipeline metrics, cost distributions, and recovery rates.
 
@@ -525,7 +525,7 @@ def update_dashboard():
 dashboard.open(live=True)
 update_dashboard()
 ```
-![](Images/Crude_Oil_Production_Over_Time.png)
+![](Images/real_time.gif)
 
 ## Conclusion
 
