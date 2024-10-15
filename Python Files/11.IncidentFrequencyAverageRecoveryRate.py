@@ -25,14 +25,14 @@ timestamps = [int(datetime(year, 1, 1).timestamp() * 1000) for year in incident_
 severity_proportions = severity_counts.div(severity_counts.sum(axis=1), axis=0)
 
 chart = lc.ChartXY(
-    theme=lc.Themes.Light, 
+    theme=lc.Themes.Dark, 
     title="Incident Frequency and Average Recovery Rate Over Time"
 )
 
 incident_series = chart.add_point_line_series()
 incident_series.set_name("Incident Frequency")
-incident_series.set_line_color(lc.Color('yellow'))  # Blue color
-incident_series.set_point_shape('Circle').set_point_size(6)
+incident_series.set_line_color(lc.Color('yellow'))  # yellow color
+incident_series.set_point_shape('Triangle').set_point_size(8)
 incident_series.add(x=timestamps, y=incident_counts.values.tolist())
 
 y_axis_left = chart.get_default_y_axis()
@@ -43,7 +43,7 @@ y_axis_right_1.set_title("Average Recovery Rate (Barrels)")
 recovery_series = chart.add_point_line_series(y_axis=y_axis_right_1)
 recovery_series.set_name("Average Recovery Rate")
 recovery_series.set_line_color(lc.Color(0, 255, 0))  # Green color
-recovery_series.set_point_shape('Circle').set_point_size(6)
+recovery_series.set_point_shape('Circle').set_point_size(8)
 recovery_series.add(x=timestamps, y=avg_recovery_rate.values.tolist())
 
 y_axis_right_2 = chart.add_y_axis(opposite=True)

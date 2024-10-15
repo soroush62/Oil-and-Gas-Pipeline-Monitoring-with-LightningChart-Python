@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
 import lightningchart as lc
-from datetime import datetime
 
 lc.set_license(open('../license-key').read())
 
@@ -16,7 +15,6 @@ monthly_data = data.groupby(['Year', 'Month']).agg({
 }).reset_index()
 
 monthly_data['Log Normalized Costs'] = np.log1p(monthly_data['All Costs'])
-
 monthly_data['Log Normalized Costs'] = (monthly_data['Log Normalized Costs'] - monthly_data['Log Normalized Costs'].min()) / \
                                        (monthly_data['Log Normalized Costs'].max() - monthly_data['Log Normalized Costs'].min())
 
@@ -63,14 +61,19 @@ line_series.add(x=x_values.tolist(), y=y_values.tolist())
 
 x_axis = chart.get_default_x_axis()
 x_axis.set_title("Month")
-x_axis.set_interval(0.5, 12.5) 
-x_axis.set_tick_strategy('Numeric')  
+x_axis.set_interval(0.5, 12.5)
+
+x_axis.set_tick_strategy('Empty')
+month_labels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+for i, month_name in enumerate(month_labels, start=1):
+    custom_tick = x_axis.add_custom_tick()
+    custom_tick.set_value(i)
+    custom_tick.set_text(month_name)
 
 y_axis = chart.get_default_y_axis()
 y_axis.set_title("Log-Normalized Cost (0 to 1)")
 
 legend = chart.add_legend()
 legend.add(box_series).add(line_series)
-legend.set_margin
 
 chart.open()
